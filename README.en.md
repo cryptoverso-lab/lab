@@ -51,6 +51,9 @@ MIT, same as the book's code.
 
 <div align="center">
 
-<a href="https://cryptoverso.net"><img src="assets/cryptoverso.svg" alt="Cryptoverso" width="132"></a>
+<a href="https://cryptoverso.net"><img src="assets/cryptoverso-mark.svg" alt="Cryptoverso" width="72"></a>
+
+**CRYPTOVERSO**<br>
+<sub>trading, ricerca, insights</sub>
 
 </div>
