@@ -25,15 +25,9 @@ Hence one rule, with no exceptions:
 
 ## How it is updated
 
-These pages are **not written by hand**. They are generated from the book's production repository, where the list of routes lives alongside the chapters that cite them:
+These pages are **not written by hand**: they are generated together with the printed QR codes, from the same source that holds the list of routes. Editing a page directly here creates a gap between what is printed and what is served: at the next generation the edit disappears, and nobody remembers why it was there.
 
-```bash
-uv run python codice/figure/genera_redirect.py --sito
-```
-
-That command rewrites the pages, the `CNAME` file and the index, all from the same source the printed QR codes come from. The result is then published here. Editing a page directly in this repository creates a gap between what is printed and what is served: at the next generation the edit disappears, and nobody remembers why it was there.
-
-The generator also carries a safety gate: it **refuses to produce QR codes for a domain that does not resolve in DNS**. A QR printed against a name that does not exist is the most expensive mistake in the whole production, because you only find out once the book is bound.
+The generator also carries a safety gate: it refuses to produce QR codes for a domain that does not resolve. A QR printed against a name that does not exist is the most expensive mistake in the whole production, because you only find out once the book is bound.
 
 ## What a route looks like
 
@@ -44,10 +38,6 @@ One page, no JavaScript, no dependencies:
 - a visible link, for readers with auto-forwarding disabled or on a slow connection.
 
 The forward is stated in plain sight: you see where you are going before you get there.
-
-## Infrastructure
-
-Served by **GitHub Pages** on a custom domain: the `CNAME` file declares `lab.cryptoverso.net`, and the subdomain's DNS record is a CNAME to `cryptoverso-lab.github.io`. The `.nojekyll` file stops Jekyll from skipping paths that begin with an underscore.
 
 ## Where everything else lives
 
@@ -61,10 +51,6 @@ MIT, same as the book's code.
 
 <div align="center">
 
-<br>
-
-<img src="assets/cryptoverso-logo.svg" alt="Cryptoverso" width="56">
-
-**Luigi Garone — [Cryptoverso](https://cryptoverso.net)**
+<a href="https://cryptoverso.net"><img src="assets/cryptoverso.svg" alt="Cryptoverso" width="132"></a>
 
 </div>

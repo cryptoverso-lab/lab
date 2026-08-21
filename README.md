@@ -25,15 +25,9 @@ Per questo vale una regola sola, e non ha eccezioni:
 
 ## Come si aggiorna
 
-Le pagine **non si scrivono a mano**: sono generate dalla repository di produzione del libro, dove vive l'elenco delle rotte insieme ai capitoli che le citano.
+Le pagine **non si scrivono a mano**: sono generate insieme ai QR stampati, dalla stessa fonte che tiene l'elenco delle rotte. Modificare una pagina direttamente qui significa creare uno scostamento fra ciò che è stampato e ciò che è servito: alla generazione successiva la modifica sparisce, e nessuno si ricorda perché.
 
-```bash
-uv run python codice/figure/genera_redirect.py --sito
-```
-
-Quel comando riscrive le pagine, il file `CNAME` e l'indice, tutto a partire dalla stessa fonte da cui nascono i QR stampati. Poi il contenuto viene portato qui e pubblicato. Modificare una pagina direttamente in questo repository significa creare uno scostamento fra ciò che è stampato e ciò che è servito: alla generazione successiva la modifica sparisce, e nessuno si ricorda perché.
-
-Lo stesso generatore contiene un blocco di sicurezza: **si rifiuta di produrre QR verso un dominio che non risolve in DNS**. Un QR stampato su un nome che non esiste è l'errore più costoso di tutta la produzione, perché si scopre solo a libro rilegato.
+Il generatore contiene anche un blocco di sicurezza: si rifiuta di produrre QR verso un dominio che non risolve. Un QR stampato su un nome che non esiste è l'errore più costoso della produzione, perché si scopre solo a libro rilegato.
 
 ## Com'è fatta una rotta
 
@@ -44,10 +38,6 @@ Una pagina, senza JavaScript, senza dipendenze:
 - un collegamento visibile, per chi ha il rinvio automatico disattivato o arriva con una connessione lenta.
 
 Il rinvio è dichiarato in chiaro: chi apre la pagina vede dove sta andando prima di arrivarci.
-
-## Infrastruttura
-
-Servito da **GitHub Pages** su dominio proprio: il file `CNAME` dichiara `lab.cryptoverso.net`, e il record DNS del sottodominio è un CNAME verso `cryptoverso-lab.github.io`. Il file `.nojekyll` impedisce a Jekyll di ignorare i percorsi che cominciano con un trattino basso.
 
 ## Dove sta il resto
 
@@ -61,10 +51,6 @@ MIT, come il codice del libro.
 
 <div align="center">
 
-<br>
-
-<img src="assets/cryptoverso-logo.svg" alt="Cryptoverso" width="56">
-
-**Luigi Garone — [Cryptoverso](https://cryptoverso.net)**
+<a href="https://cryptoverso.net"><img src="assets/cryptoverso.svg" alt="Cryptoverso" width="132"></a>
 
 </div>
