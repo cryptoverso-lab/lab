@@ -1,0 +1,18 @@
+# ARTEFATTI DI PIANIFICAZIONE — MAI IN UN REPOSITORY PUBBLICO.
+#
+# Regola di Luigi del 2026-08-22. Questo repository e' PUBBLICO per necessita':
+# serve `lab.cryptoverso.net` via GitHub Pages, e le Pages su repo privata
+# richiedono un piano a pagamento. Quindi tutto cio' che finisce qui dentro e'
+# leggibile da chiunque, compreso chi ha il libro in mano.
+#
+# Il gitignore GLOBALE gia' ignora queste cartelle, ma vive sulla macchina di
+# chi sviluppa: chi clona non ce l'ha. Un presidio che protegge solo la
+# macchina su cui e' stato scritto non protegge il repository.
+.planning/
+.claude/
+graphify-out/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
